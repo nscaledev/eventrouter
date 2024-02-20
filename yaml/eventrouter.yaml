@@ -15,13 +15,13 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: eventrouter 
+  name: eventrouter
   namespace: kube-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: eventrouter 
+  name: eventrouter
 rules:
 - apiGroups: [""]
   resources: ["events"]
@@ -30,7 +30,7 @@ rules:
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
-  name: eventrouter 
+  name: eventrouter
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -71,12 +71,12 @@ spec:
     spec:
       containers:
         - name: kube-eventrouter
-          image: registry.redhat.io/openshift-logging/eventrouter-rhel8:v0.3
+          image: ghcr.io/nscaledev/eventrouter:latest
           resources:
             requests:
               cpu: 100m
               memory: 128Mi
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           volumeMounts:
           - name: config-volume
             mountPath: /etc/eventrouter
