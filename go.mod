@@ -6,7 +6,7 @@ require (
 	github.com/Shopify/sarama v1.23.1
 	github.com/crewjam/rfc5424 v0.0.0-20180723152949-c25bdd3a0ba2
 	github.com/eapache/channels v1.1.0
-	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
+	github.com/golang/glog v1.2.4
 	github.com/prometheus/client_golang v1.12.1
 	github.com/sethgrid/pester v0.0.0-20190127155807-68a33a018ad0
 	github.com/spf13/viper v1.4.0
